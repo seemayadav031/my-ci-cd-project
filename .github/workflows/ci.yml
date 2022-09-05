@@ -35,4 +35,4 @@ jobs:
         run: go run main.go 
 
       - name: Run car folders main file
-        run: go run car.go     
+        run: go run car/car.go     
