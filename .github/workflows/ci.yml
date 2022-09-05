@@ -32,4 +32,7 @@ jobs:
           echo test, and deploy your project.
 
       - name: Run main file
-        run: go run main.go    
+        run: go run main.go 
+
+      - name: Run car folders main file
+        run: go run car.go     
