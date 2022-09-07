@@ -17,10 +17,8 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
-      - name: Run main file
-        run: |
-           go run main.go 
-           curl localhost:8080/ping  
+      - name: Build
+        run: go build -v ./... 
 
       - name: Run car folders main file
         run: go run car/car.go     
