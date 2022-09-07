@@ -4,7 +4,7 @@ on:
     branch: node
 
 jobs:
-    setup-learn:
+    setup-learn: setup node
        runs-on: ubuntu-latest
        steps:
            - uses: actions/checkout@v3
@@ -14,7 +14,8 @@ jobs:
            - run: npm install -g bats
            - run: bats -v  
 
-    build:
+    build: build go
+        runs-on: ubuntu-latest
         steps: 
             - name: Build
               run: go build -v ./...            
