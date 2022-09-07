@@ -18,10 +18,9 @@ jobs:
           echo test, and deploy your project.
 
       - name: Run main file
-        run: go run main.go 
-
-      - name: ping api
-        run : curl localhost:8080/ping  
+        run: |
+           go run main.go 
+           curl localhost:8080/ping  
 
       - name: Run car folders main file
         run: go run car/car.go     
