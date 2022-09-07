@@ -5,11 +5,12 @@ on:
 
 jobs:
     setup-learn:
-       runs-on: ubuntu-latest
+       
        steps:
+           - runs-on: ubuntu-latest
            - uses: actions/checkout@v3
            - uses: actions/setup-node@v3
              with:
                  node-version: '14'
-           - run: install -g bats
+           - run: npm install -g bats
            - run: bats -v      
